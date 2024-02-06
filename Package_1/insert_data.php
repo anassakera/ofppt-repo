@@ -1,4 +1,5 @@
 <?php
+// Test
 // اتصال بقاعدة البيانات
 $host = "localhost";
 $db = "mydatabase";
