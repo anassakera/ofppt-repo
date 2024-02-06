@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../css/you_are_admin.css">
+
+ 
+ 
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img class="logo" src="../img/logo.png">
+        <ul class="nav flex-column" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link " data-bs-toggle="tab" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#">Storage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#">Fix issues </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#">Comments </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#">Settings </a>
+          </li>
+          <li class="nav-item"> 
+            <img class="photo" src="../img/photo.jpg" alt="Photo"  >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">2023/2024</a>
+              </li>
+              <li class="nav-item ml-auto">
+                <a class="nav-link active" href="#">"👋🏼👋🏼 "مرحــبـــــا بك في برنامــج تتبع الأدوات</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="row">
+          <div class="col-6" style="margin: 15px; width: 300px;">
+            <h4>Select Class</h4>
+
+
+          </div>
+          <div class="col-6"  style="margin: 15px; position: absolute; right: 0px; width: 820px;">
+            <h4>OFPPT CFPMS</h4>
+            <div class="overflow-auto" >
+              <div class="search-box">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search item in CFIFJ OFPPT">
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Redirect based on clicked tab
+    $('.nav-link').click(function() {
+      var tabText = $(this).text().trim();
+      switch(tabText) {
+        case 'Dashboard':
+          window.location.href = 'https://www.lala1.ma';
+          break;
+        case 'Storage':
+          window.location.href = 'https://www.lala2.ma';
+          break;
+        case 'Fix issues':
+          window.location.href = 'https://www.lala3.ma';
+          break;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+/* Hello */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+@keyframes Show {
+
+    0%,
+    49.999% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+@keyframes Hidden {
+
+    0%,
+    49.999% {
+        opacity: 1;
+        z-index: 5;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.container .box {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    transition: all 0.8s;
+    transform: translateX(0);
+    background-color: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container.active .box {
+    transform: translateX(100%);
+}
+
+.container .box .form {
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .box .form.sign_up {
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.container .box .form.sign_up {
+    transition: all 1.15s;
+    z-index: 1;
+    opacity: 0;
+    background-color: #7DC4FE;
+}
+
+/* قمت بتعديل لون الخلفية التي في صفحة تسجيل الدخول */
+.container .box .form.sign_in {
+    opacity: 1;
+    transition: all 1.15s;
+    z-index: 5;
+    background-color: #7DC4FE;
+    /* background-color: #fff; */
+}
+
+.container.active .box .form.sign_in {
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.active .box .form.sign_up {
+    z-index: 5;
+    opacity: 1;
+}
+
+.container.active .box .form.sign_up {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.container .box .form.sign_in {
+    transition: all 0.5s;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.container.active .box .form.sign_in {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* عدل على لون الخلفية التي تحتوي على الصورة في صفحة تسجيل الدخول anass */
+.container .overlay {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    transition: all 0.8s;
+    transform: translateX(0);
+    background-color: #0C356A;
+    z-index: 1;
+    overflow: hidden;
+    z-index: 5;
+    opacity: 1;
+}
+
+.container.active .overlay {
+    transform: translateX(-100%);
+}
+
+.container .overlay .page {
+
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* خلي المحاذات في حاوية الأوفرلاي في البداية anass1 */
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.container.active .overlay .page.page_signIn {
+    opacity: 0;
+    margin-left: -100%;
+}
+
+.container.active .overlay .page.page_signUp {
+    margin-left: 0%;
+}
+
+
+.overlay .page h3 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.overlay .page p {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 550;
+    background-color: transparent;
+    padding: 12px 45px;
+    border-radius: 22px;
+
+    border: 1.5px solid #fff;
+    cursor: pointer;
+}
+
+.form h3 {
+    color: #222;
+    font-size: 40px;
+}
+
+.form sign_in {
+    color: #222;
+    font-size: 40px;
+}
+
+.form span {
+    color: #3a3838;
+}
+
+/* تعديل شكل البريد و كلمة المرور anass */
+.form_input .type {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.form_input .type label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.form_input .type input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(12, 53, 105, 0.28);
+    border-radius: 12px;
+    outline: none;
+    background-color: transparent;
+    margin-top: 5px; /* Add this line */
+}
+
+.form_input .type .label_password {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: start;
+
+     /* Add this line */
+}
+
+/* Style for Remember me checkbox and label */
+
+
+.Remember_me{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    margin-left: 3px;
+
+}
+.Remember_me input[type="checkbox"]{
+   accent-color: #0C356A;
+   mix-blend-mode: multiply; 
+   border: 1px solid blue;
+   cursor: pointer;
+   
+}
+
+.Remember_me a, .Remember_me label {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block; /* Add this line */
+    margin-left: 5px; /* Adjust the margin */
+    cursor: pointer;
+}
+
+.form_input .forgot a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* تعديل خصائص الزر رقم واحد anass4 */
+.bkg {
+    width: 330px;
+    border-radius: 12px;
+    background-color: #0C356A;
+    color: #FFFFFF;
+
+    border: 2px solid transparent;
+    /* Green */
+
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+
+.container .box .form.sign_in .title {
+
+    /* anass3 تغيير لون النص إلى الأزرق */
+    color: #0C356A;
+    /* الشفافية */
+    opacity: 0.8;
+    /* نوع الخط */
+    font-family: 'Mulish', sans-serif;
+}
+
+.container .box .form.sign_in .email_label {
+    color: #ffffff;
+    font-weight: bold;
+    width: 130px;
+    float: left;
+    text-align: start;
+}
+
+
+.form sign_up {
+    color: #222;
+    font-size: 40px;
+}
+
+.form span {
+    color: #3a3838;
+}
+
+/* تعديل شكل البريد و كلمة المرور anass */
+.form_input .type {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form_input .type label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.form_input .type input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(12, 53, 105, 0.28);
+    border-radius: 12px;
+    outline: none;
+    background-color: transparent;
+    margin-top: 5px; /* Add this line */
+}
+#eye_1 , #eye_2 , #eye_3{
+    position: absolute;
+    right: 4%;
+    top: 60%;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.form_input .type .label_password {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: start;
+
+     /* Add this line */
+}
+.form_input .type .email_label_signup{
+    text-align: start;
+}
+.form_input .type .full_name_label_signup{
+    text-align: start;
+}
+.form_input .type .label_password_signup{
+    text-align: start;
+}
+.form_input .type .phone_label_signup{
+    text-align: start;
+}
