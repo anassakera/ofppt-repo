@@ -1,5 +1,5 @@
 <?php
-// Test
+// Test from anass
 // اتصال بقاعدة البيانات
 $host = "localhost";
 $db = "mydatabase";
