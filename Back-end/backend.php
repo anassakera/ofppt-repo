@@ -53,9 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_role'] = $user['role'];
 
             if ($_SESSION['user_role'] == 2) {
-                header('Location: http://localhost/ofppt/show-hide-fixed/Front-End/HTML/you_are_admin.html');
+                header('Location: http://localhost/hajar/Front-End/HTML/you_are_admin.html');
             } else {
-                header('Location: http://localhost/ofppt/show-hide-fixed/Front-End/HTML/you_are_user.html');
+                header('Location: http://localhost/hajar/Front-End/HTML/you_are_user.html');
             }
              
         } else {

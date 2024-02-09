@@ -9,11 +9,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   overflow: hidden;
 }
+
+
 
 .col-3 {
   background-color: rgba(12, 53, 106, 0);
@@ -23,22 +25,21 @@ body {
   padding: 15px;
 }
 
-.logo {
+.logo{
   width: 90px;
   height: 90px;
   filter: brightness(70%);
 }
-
-.photo {
-  width: 150px;
-  height: 200px;
+.photo{
+  width:150px; 
+  height:200px;
   position: absolute;
   left: 0;
   bottom: 0;
-  opacity: 0.3;
+  opacity: 0.3; 
   border-radius: 10px;
-}
 
+}
 .navbar {
   background-color: #ffffff;
   border-radius: 10px;
@@ -46,10 +47,9 @@ body {
 }
 
 .col-3 .nav-link {
-  color: #fff;
+   color: #fff;
 }
-
-.col-3 .nav-link:hover {
+.col-3 .nav-link:hover{
   background-color: #D0EAFF;
   border-radius: 29px;
 }
@@ -67,20 +67,20 @@ body {
   flex: 0 0 auto;
 }
 
+
 .col-6 {
   background-color: #ffffff;
-  border: 1px;
+  border:  1px;
   height: 400px;
   border-radius: 32px;
 }
-
-h4 {
+h4{
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
 
+}
 .overflow-auto {
-  width: 590px;
+  width: 590px ;
   height: 320px;
   border-radius: 23px;
   position: relative;
@@ -89,40 +89,33 @@ h4 {
   overflow: hidden;
 }
 
-.search-box {
-  width: auto;
-  height: 40px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding: 10px;
-  margin-left: auto;
-  background-color: #ffffff;
-  border-radius: 30px;
-  margin-top: 20px;
-  border: 2px solid #B8DBF8;
-}
-
-.search-box i {
-  font-size: 20px;
-  color: #000;
-  margin-right: 10px;
-  background-color: #B8DBF8;
-  border-radius: 100%;
-}
-
-.search-box input {
-  flex: 1;
-  height: 30px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-
-/* Media Query for Small Screens */
-@media (max-width: 500px) {
   .search-box {
     width: 450px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px;
     margin-left: 192px;
-  }
-}
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: 2px solid #B8DBF8; /* Added border property */
+    }
+
+    .search-box i {
+    font-size: 20px;
+    color: #000;
+    margin-right: 10px;
+    background-color: #B8DBF8;
+    border-radius: 100%;
+    }
+
+    .search-box input {
+    flex: 1;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    }
+  

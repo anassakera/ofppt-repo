@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Add Data </h1>
+            <form action="insert_establishment.php" method="post">
+                <label for="establishment_name">Establishment Name:</label><br>
+                <input type="text" name="establishment_name" required>
+                <button type="submit">Add Establishment</button>
+            </form>
+            <form action="insert_department.php" method="post">
+                <label for="department_name">Department Name:</label><br>
+                <input type="text" name="department_name" required>
+                <label for="establishment_id">Select Establishment:</label>
+                <select name="establishment_id">
+                    <?php
+                    include('select_establishments.php');
+                    while ($establishment = mysqli_fetch_array($all_establishments, MYSQLI_ASSOC)) :;
+                    ?>
+                        <option value="<?php echo $establishment["id"]; ?>">
+                            <?php echo $establishment["name_of_Establishment"]; ?>
+                        </option>
+                    <?php
+                    endwhile;
+                    ?>
+                </select>
+                <br>
+                <button type="submit">Add Department</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

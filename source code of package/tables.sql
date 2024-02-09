@@ -21,5 +21,4 @@ CREATE TABLE classes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name_of_class VARCHAR(255) NOT NULL
 );
-Hello anass
 

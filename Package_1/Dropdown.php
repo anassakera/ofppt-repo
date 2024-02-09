@@ -13,12 +13,9 @@
         <select name="Establishment">
             <?php
             include('select_class.php');
-            // use a while loop to fetch data 
-            // from the $all_classes variable 
-            // and individually display as an option
-            
             while ($establishment = mysqli_fetch_array(
-                $all_establishments, MYSQLI_ASSOC
+                $all_establishments,
+                MYSQLI_ASSOC
             )) :;
             ?>
                 <option value="<?php echo $establishment["id"]; ?>">
@@ -26,18 +23,15 @@
                 </option>
             <?php
             endwhile;
-            // While loop must be terminated
             ?>
         </select> <br>
         <label>Select a Class</label>
         <select name="Class">
             <?php
             include('select_class.php');
-            // use a while loop to fetch data 
-            // from the $all_classes variable 
-            // and individually display as an option
             while ($class = mysqli_fetch_array(
-                $all_classes, MYSQLI_ASSOC
+                $all_classes,
+                MYSQLI_ASSOC
             )) :;
             ?>
                 <option value="<?php echo $class["id"]; ?>">
