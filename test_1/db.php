@@ -1,6 +1,13 @@
 <?php
-// to connect mydatabase
-$con=new mysqli('localhost','root','','mydatabase');
-if(!$con){
-    die(mysqli_error($con));
+$host = "localhost";
+$db = "mydatabase";
+$user = "root";
+$pass = "";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("خطأ في الاتصال بقاعدة البيانات: " . $e->getMessage());
 }
+?>
