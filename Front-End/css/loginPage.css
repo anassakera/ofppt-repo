@@ -7,6 +7,10 @@
 }
 
 body {
+    background-image: url(../img/backgound.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     font-family: 'Mulish', sans-serif;
     display: flex;
     justify-content: center;

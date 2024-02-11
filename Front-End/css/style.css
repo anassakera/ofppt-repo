@@ -1,0 +1,282 @@
+/* أسلوب الصفحة */
+:root {
+  --body-bg: #92bfdf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* لاتقم بتكرارها عدة مرات */
+  background-repeat: no-repeat;
+  /* قم بجعل الصورة في منتصف الشاشة */
+  background-position: center;
+  /* قم بتثبيتها في منتصف الشاشة */
+  background-attachment: fixed;
+}
+
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 2.2rem;
+  padding-block: 2rem;
+  font-size: 1.2rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list li {
+  padding: 0.4rem 0.5rem;
+  margin-left: 1rem;
+  border-radius: 100vw 0 0 100vw;
+}
+
+
+.nav-list li.active {
+  background-color: #92bfdf;
+  position: relative;
+}
+
+.nav-list li.active::before,
+.nav-list li.active::after {
+  --border-radius: 1rem;
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  right: 0rem;
+  background-color: transparent;
+
+}
+
+.nav-list li.active::before {
+  border-radius: 0 0 100vw 0;
+  top: calc(var(--border-radius) * -1);
+  box-shadow: 5.2px 5.2px 0 5px var(--body-bg);
+}
+
+.nav-list li.active::after {
+  border-radius: 0 100vw 0 0;
+  bottom: calc(var(--border-radius) * -1);
+  box-shadow: 5.2px -5.2px 0 5px var(--body-bg);
+}
+
+
+/* شعار الصفحة */
+.nav-list img {
+  filter: brightness(93%);
+  margin-left: 2.3rem;
+
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+/* حاوية العناصر */
+.container {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+/* العمود الأيسر */
+.col-3 {
+  /* يمكنك تعديل قيمة الشفافية حسب الحاجة */
+  background-color: rgba(12, 53, 106, 0.3);
+  /* 15px للأعلى اليمين و 15px للأسفل اليمين */
+  border-radius: 15px 0 0 15px;
+  color: #fff;
+  width: 190px;
+  padding: 0px;
+  /* قيمة الـ blur يمكن تعديلها حسب الحاجة */
+  backdrop-filter: blur(15px);
+
+}
+
+/* قائمة التنقل */
+/* شريط الأبيض للي كاين الفوق */
+.navbar {
+  background-color: #ffffff;
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 10px;
+  padding: 5;
+}
+
+/* عناصر قائمة التنقل في العمود الأيسر */
+.col-3 .nav-link {
+  color: #fff;
+}
+
+/* تحسين تجربة المستخدم عند تحويل المؤشر فوق العناصر في قائمة التنقل */
+.col-3 .nav-link:hover {
+  background-color: #D0EAFF;
+  border-radius: 15px;
+}
+
+/* الخلفية */
+.col {
+  /* يمكنك تعديل قيمة الشفافية حسب الحاجة */
+  background-color: rgba(208, 255, 233, 0.4);
+  /* قيمة الـ blur يمكن تعديلها حسب الحاجة */
+  backdrop-filter: blur(15px);
+
+}
+
+/* 2024/2025 */
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  border-radius: 15px 0 0 15px;
+}
+
+/* مرحبا بك في برنامج تتبع*/
+.navbar-nav .nav-item {
+  flex: 0 0 auto;
+}
+
+/* العناصر في العمود الأيسر */
+.col-3 .nav-link {
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* تحسين تجربة المستخدم عند تحويل المؤشر فوق العناصر في العمود الأيسر */
+.col-3 .nav-link:hover {
+  background-color: #D0EAFF;
+  border-radius: 15px;
+}
+
+/* العناصر في العمود الأيمن */
+.col-lg-6 {
+  text-align: center;
+}
+
+/* تحسين تجربة المستخدم عند تحويل المؤشر فوق العناصر في العمود الأيمن */
+.col-lg-6.mb-3 {
+  margin-bottom: 20px;
+}
+
+
+.overflow-auto {
+  font-weight: 500;
+  width: 97%;
+  height: 80%;
+  border-radius: 15px;
+  position: relative;
+  top: 30px;
+  background-color: #F2F0F5;
+  overflow: hidden;
+  align-items: center;
+  margin-left: auto;
+  /* توسيع الهامش من اليسار للتوسيع بشكل أفضل */
+  margin-right: auto;
+}
+
+/* ستايل لحقل البحث */
+.search-box {
+  width: 80%;
+  /* زيادة النسبة لتصبح أكبر عند شاشات أصغر */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: auto;
+  /* توسيع الهامش من اليسار للتوسيع بشكل أفضل */
+  margin-right: auto;
+  /* توسيع الهامش من اليمين للتوسيع بشكل أفضل */
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 2px solid #0cb0ff;
+  /* Added border property */
+}
+
+
+
+/* ستايل لحقل الإدخال */
+.search-box input {
+  flex: 1;
+  height: 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+
+.Select_class {
+  width: 23%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  height: 450px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 15px;
+
+}
+
+.Items_fetch {
+  width: 73%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  height: 450px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Main Axis Alignment */
+  /* justify-content: center; */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 15px;
+
+}
+
+.Storage_board{
+  width: 98%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  height: 450px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 15px;
+}

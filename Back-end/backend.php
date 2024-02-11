@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $role = 1;
 
         // إذا كان البريد الإلكتروني هو أحد بين الثلاثة الأولى، قم بتعديل نوع الصلاحية إلى 2 (مسؤول)
-        if (in_array($email, ['admin1@example.com', 'admin2@example.com', 'admin3@example.com'])) {
+        if (in_array($email, ['anasschakloul@gmail.com', 'admin2@example.com', 'admin3@example.com'])) {
             $role = 2;
         }
 
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_role'] = $user['role'];
 
             if ($_SESSION['user_role'] == 2) {
-                header('Location: http://localhost/hajar/Front-End/HTML/you_are_admin.html');
+                header('Location: http://localhost/hajar/Front-End/HTML/Dashboard.html');
             } else {
                 header('Location: http://localhost/hajar/Front-End/HTML/you_are_user.html');
             }
